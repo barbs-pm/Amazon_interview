@@ -3,7 +3,14 @@
 # 3 | 7 | 1 | 2 | 8 | 4 | 5  -> n = 8, number missing = 6
 
 arg = [3,7,1,2,8,4,5]
+n = 8
 
-def find_missing(input):
+def find_missing():
     
+    sum_of_elements = sum(arg)
+    expected_sum = (n / 2) * (1 + n)
+
+    print("The missing number is: ",  (expected_sum - sum_of_elements))
     return -1
+
+find_missing()
