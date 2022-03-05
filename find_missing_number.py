@@ -2,15 +2,12 @@
 # The input array is not sorted. Look at the below array and give it a try before checking the solution.
 # 3 | 7 | 1 | 2 | 8 | 4 | 5  -> n = 8, number missing = 6
 
-arg = [3,7,1,2,8,4,5]
-n = 8
-
-def find_missing():
+def find_missing(input):
     
-    sum_of_elements = sum(arg)
+    n = len(input) + 1
+    sum_of_elements = sum(input)
     expected_sum = (n / 2) * (1 + n)
 
-    print("The missing number is: ",  (expected_sum - sum_of_elements))
-    return -1
+    return (expected_sum - sum_of_elements)
 
-find_missing()
+find_missing([3,7,1,2,8,4,5])
