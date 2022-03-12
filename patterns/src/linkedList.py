@@ -24,6 +24,8 @@ class LinkedList:
   # print method for the linked list
   def printLL(self):
     current = self.head
+    a = ''
     while(current):
-      print(current.data)
+      a += " -> " + str(current.data)
       current = current.next
+    print(a)

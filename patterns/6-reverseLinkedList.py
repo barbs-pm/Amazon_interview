@@ -1,33 +1,33 @@
-# Singly Linked List with insertion and print methods
 from src.linkedList import *
 
-
-def reverseRecursive(LL, prev):
+def reverseRecursive(curr, prev):
     
     # if its the end of the linked list
-    if LL.next is None:
-        LL.head = LL # set head as the current node
-        LL.next = prev # his next its now his previous
+    if curr.next is None:
+        linkedList.head = curr
+        reversedList = linkedList.head
+        reversedList.next = prev
+
         return
 
-    next = LL.next
-    LL.next = prev
+    next = curr.next
+    curr.next = prev
 
-    reverseRecursive(next, LL)
+    reverseRecursive(next, curr)
 
-def reverse(LL):
-    if LL.head is None:
+def reverse(linkedList):
+    if linkedList is None:
         return
-    reverseRecursive(LL.head, None)
+    reverseRecursive(linkedList.head, None)
 
-LL = LinkedList()
+linkedList = LinkedList()
 for i in range(5):
-    LL.insert(i)
+    linkedList.insert(i)
 
 print('Before reverse: ')
-LL.printLL()
-reverse(LL)
+linkedList.printLL()
+reverse(linkedList)
 print('After reverse: ')
-LL.printLL()
+linkedList.printLL()
 
    
