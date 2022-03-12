@@ -1,30 +1,16 @@
 # Given a linked list, determine if it has a cycle in it
 
-# If the Linked Lists does not have a cycle in it, fast will reach the end of the Linked Lists before the slow 
-# and this will reveal that there is no cycle in the Linked Lists. If slow reach fast, there's a cycle
+# If the Linked Lists does not have a cycle in it, fast wiLL reach the end of the Linked Lists before the slow 
+# and this wiLL reveal that there is no cycle in the Linked Lists. If slow reach fast, there's a cycle
 
-class Node:
-    def __init__(self, val, nextNode = None):
-        self.val = val
-        self.nextNode = nextNode
+from src.linkedList import *
  
-    def addNode(self, val):
-        newNode = Node(val)
-        self.nextNode = newNode
-        return newNode
+def mid(LL):
+    fast = slow = LL
 
-head = Node(1) # create the linked list
-p = head
-
-for i in range(2, 10): #insert nodes
-    p = p.addNode(i)
- 
-def mid(head):
-    fast = slow = head
-
-    while(fast is not None and fast.nextNode is not None):
-        fast = fast.nextNode.nextNode
-        slow = slow.nextNode
+    while(fast is not None and fast.next is not None):
+        fast = fast.next.next
+        slow = slow.next
         if (fast == slow):
             print("There's a cycle in the list")
             return 0
@@ -32,5 +18,9 @@ def mid(head):
     print("There isn't a cycle in the list")
     return slow
 
-midNode = mid(head)
-print(midNode.val) 
+LL = LinkedList()
+for i in range(10):
+    LL.insert(i)
+
+midNode = mid(LL.head)
+print(midNode.data) 
