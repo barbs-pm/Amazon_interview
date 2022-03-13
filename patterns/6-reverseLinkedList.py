@@ -27,7 +27,7 @@ for i in range(5):
 print('Before reverse: ')
 linkedList.printLL()
 reverse(linkedList)
-print('After reverse: ')
+print('\nAfter reverse: ')
 linkedList.printLL()
 
    

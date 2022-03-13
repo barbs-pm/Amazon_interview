@@ -26,6 +26,7 @@ class LinkedList:
     current = self.head
     a = ''
     while(current):
-      a += " -> " + str(current.data)
+      print (current.data, end = "->") 
+      #a += " -> " + str(current.data)
       current = current.next
-    print(a)
+    #print(a)
