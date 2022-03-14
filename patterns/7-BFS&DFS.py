@@ -30,6 +30,7 @@ def dfs(visited, graph, node):
         for neighbor in graph[node]:
             dfs(visited, graph, neighbor)
 
+
 # Driver Code
-bfs(visited, graph, 'B')
-dfs(visited, graph, 'B')
+bfs(visited, graph, 'A')
+dfs(visited, graph, 'A')
