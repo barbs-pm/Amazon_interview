@@ -1,6 +1,5 @@
 # Find the min value from tree using DFS algorithm
 
-from locale import currency
 from src.binaryTree import *
 
 def createBT():
