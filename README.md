@@ -1,4 +1,4 @@
-# Python Algorithms For AWS Exercises
+# Python Algorithms for Amazon Interview
 
 ## Objective
 Getting prepared for AWS code interview using the exercises in this **[link](https://www.educative.io/blog/crack-amazon-coding-interview-questions)**
